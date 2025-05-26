@@ -8,10 +8,12 @@ app.use(cors());
 app.use(express.json());
 
 // 🔐 Firebase Admin Initialization
-const serviceAcc = require('./key.json');
+const serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT);
+
 initializeApp({
-  credential: cert(serviceAcc),
+  credential: cert(serviceAccount),
 });
+
 const db = getFirestore();
 
 // Sanitize email function — used consistently everywhere
