@@ -6,6 +6,7 @@ const { getFirestore, FieldValue } = require('firebase-admin/firestore');
 const app = express();
 app.use(cors());
 app.use(express.json());
+require('dotenv').config();
 
 // 🔐 Firebase Admin Initialization
 const serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT);
