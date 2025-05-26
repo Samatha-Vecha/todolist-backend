@@ -9,7 +9,7 @@ const PORT = 3000;
 app.use(cors());
 app.use(express.json());
 
-const serviceAcc = require('./key.json');
+const serviceAcc = require('./backend/key.json');
 initializeApp({
     credential: cert(serviceAcc)
 });
