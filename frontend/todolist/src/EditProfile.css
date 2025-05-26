@@ -1,0 +1,109 @@
+/* src/pages/EditProfile.css */
+
+.edit-profile-container {
+  min-height: 100vh;
+  padding: 20px;
+  background: linear-gradient(to right, #f0f2f5, #dfe9f3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Card animation on load */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.edit-profile-form {
+  background: linear-gradient(145deg, #ffffff, #f3f3f3);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  max-width: 450px;
+  width: 100%;
+  animation: fadeInUp 0.6s ease-out;
+  transition: transform 0.3s ease;
+  box-sizing: border-box; /* ✅ Fix cutting issue */
+}
+
+
+.edit-profile-form:hover {
+  transform: scale(1.02);
+}
+
+.edit-profile-form h2 {
+  margin-bottom: 25px;
+  font-size: 28px;
+  text-align: center;
+  color: #333;
+  font-weight: 600;
+}
+
+.edit-profile-form input {
+  width: 100%;
+  padding: 14px;
+  margin: 12px 0;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  box-sizing: border-box; /* ✅ Ensures padding is included within width */
+}
+
+
+.edit-profile-form input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+  outline: none;
+}
+
+.edit-profile-form button {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(to right, #007bff, #0056b3);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.4s ease, transform 0.2s ease;
+}
+
+.edit-profile-form button:hover {
+  background: linear-gradient(to right, #0056b3, #003d80);
+  transform: scale(1.01);
+}
+
+@media (max-width: 768px) {
+  .edit-profile-form {
+    padding: 25px;
+    margin: 10px;
+  }
+
+  .edit-profile-form h2 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .edit-profile-form {
+    padding: 20px;
+  }
+
+  .edit-profile-form h2 {
+    font-size: 22px;
+  }
+
+  .edit-profile-form input,
+  .edit-profile-form button {
+    font-size: 16px;
+    padding: 12px;
+  }
+}

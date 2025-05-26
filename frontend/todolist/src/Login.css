@@ -1,0 +1,194 @@
+/* Layout container */
+.login-container {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+}
+
+/* Image section */
+.login-image {
+  flex: 2;
+  background: url('C:\Users\samat\OneDrive\Desktop\TODO\frontend\todolist\src\todoimg.webp') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+/* Login form section */
+.login-form {
+  flex: 1;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: white;
+}
+
+.login-form h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #f04e23;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.login-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form input {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.login-form .remember {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.login-form button {
+  background: #e94e1b;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.login-form a {
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+/* Register Link Styling */
+.register-link {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.register-link:hover {
+  text-decoration: underline;
+}
+
+/* 🔽 Responsive for smaller screens */
+/* Layout container */
+.login-container {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+}
+
+/* Image section */
+.login-image {
+  flex: 2;
+  background: url('C:\Users\samat\OneDrive\Desktop\TODO\frontend\todolist\src\todoimg.webp') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+/* Login form section */
+.login-form {
+  flex: 1;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: white;
+}
+
+.login-form h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #f04e23;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.login-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form input {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.login-form .remember {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.login-form button {
+  background: #e94e1b;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.login-form a {
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+/* Register Link Styling */
+.register-link {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.register-link:hover {
+  text-decoration: underline;
+}
+
+/* 🔽 Responsive for smaller screens */
+@media (max-width: 768px) {
+  .login-form {
+    width: 90%;
+    padding: 20px;
+    margin: auto;
+  }
+
+  .login-form h2 {
+    font-size: 1.5rem;
+  }
+
+  .login-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .login-image {
+    display: none; /* hide image section on small screens */
+  }
+}
+
+.login-form .remember {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.login-form .remember input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+}
