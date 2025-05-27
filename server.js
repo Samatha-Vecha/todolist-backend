@@ -26,19 +26,26 @@ const sanitizeEmail = (email) =>
  * Stores user profile in Firestore at: users/{uid}
  */
 app.post('/register', async (req, res) => {
-  const { uid, name, email } = req.body;
+  const { uid, name, email, location, phone } = req.body;
 
-  if (!uid || !name || !email) {
-    return res.status(400).json({ error: "uid, name, and email are required." });
+  if (!uid || !name || !email || !location || !phone) {
+    return res.status(400).json({ error: "uid, name, email, location, and phone are required." });
   }
 
   try {
-    await db.collection('users').doc(uid).set({ name, email });
-    res.status(201).json({ uid, name, email });
+    await db.collection('users').doc(uid).set({
+      name,
+      email,
+      location,
+      phone
+    });
+
+    res.status(201).json({ uid, name, email, location, phone });
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
 });
+
 
 /**
  * ✅ Create a new task
